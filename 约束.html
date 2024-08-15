@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.14" />
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+
+      html.dark {
+        --c-bg: #22272e;
+      }
+
+      html,
+      body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme')
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+
+      if (userMode === 'light') {
+        document.documentElement.dataset.theme = 'light'
+      } else if (userMode === 'dark' || systemDarkMode) {
+        document.documentElement.classList.toggle('dark', true)
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
+    <title>约束的概念 | VuePress</title><meta name="description" content="My first VuePress Site">
+    <link rel="preload" href="/assets/style-DQgJpjMi.css" as="style"><link rel="stylesheet" href="/assets/style-DQgJpjMi.css">
+    <link rel="modulepreload" href="/assets/app-crvdi8lb.js"><link rel="modulepreload" href="/assets/约束.html-CZiqILMc.js">
+    <link rel="prefetch" href="/assets/get-started.html-CNz6PS3o.js" as="script"><link rel="prefetch" href="/assets/index.html-CTZU87SE.js" as="script"><link rel="prefetch" href="/assets/SQL.html-Dt0-svUb.js" as="script"><link rel="prefetch" href="/assets/函数.html-CYpDVG4z.js" as="script"><link rel="prefetch" href="/assets/多表查询.html-Bzqak-ca.js" as="script"><link rel="prefetch" href="/assets/404.html-D5RrrEZP.js" as="script">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="vp-theme-container external-link-icon"><!--[--><header class="vp-navbar"><div class="vp-toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a class="route-link" href="/"><img class="vp-site-logo" src="https://vuejs.press/images/hero.png" alt="VuePress"><span class="vp-site-name vp-hide-mobile" aria-hidden="true">VuePress</span></a></span><div class="vp-navbar-items-wrapper" style=""><!--[--><!--]--><nav class="vp-navbar-items vp-hide-mobile" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/" aria-label="/"><!---->/<!----></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/get-started.html" aria-label="Get Started"><!---->Get Started<!----></a></div><!--]--></nav><!--[--><!--]--><button class="vp-toggle-color-mode-button" title="toggle color mode"><svg class="light-icon" viewbox="0 0 32 32" style=""><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg class="dark-icon" viewbox="0 0 32 32" style="display:none;"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="vp-sidebar-mask"></div><!--[--><aside class="vp-sidebar"><nav class="vp-navbar-items" aria-label="site navigation"><!--[--><div class="vp-navbar-item"><a class="route-link auto-link" href="/" aria-label="/"><!---->/<!----></a></div><div class="vp-navbar-item"><a class="route-link auto-link" href="/get-started.html" aria-label="Get Started"><!---->Get Started<!----></a></div><!--]--></nav><!--[--><!--]--><ul class="vp-sidebar-items"><!--[--><li><p tabindex="0" class="vp-sidebar-item vp-sidebar-heading">约束的概念 <!----></p><!----></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="vp-page"><!--[--><!--]--><div class="theme-default-content"><!--[--><!--]--><div><p><a name="Nszbe"></a></p><h1 id="约束的概念" tabindex="-1"><a class="header-anchor" href="#约束的概念"><span>约束的概念</span></a></h1><ul><li>约束是作用于表中字段上的规则，用于限制存储在表中的数据</li><li>目的是保证数据库中数据的正确性，有效性和完整性 <a name="qcokC"></a></li></ul><h1 id="约束的分类" tabindex="-1"><a class="header-anchor" href="#约束的分类"><span>约束的分类</span></a></h1><table><thead><tr><th>约束</th><th>描述</th><th>关键字</th></tr></thead><tbody><tr><td>非空约束</td><td>限制该字段的数据不能为null</td><td>not null</td></tr><tr><td>唯一约束</td><td>保证该字段的所有数据都是唯一，不重复的</td><td>unique</td></tr><tr><td>主键约束</td><td>主键是一行数据的唯一标识，要求非空且唯一</td><td>primary key</td></tr><tr><td>默认约束</td><td>保存数据时，如果未指定该字段的值，则采用默认值</td><td>default</td></tr><tr><td>检查约束</td><td>保证字段值满足某一个条件</td><td>check</td></tr><tr><td>外键约束</td><td>用来让两张表数据之间建立连接，保证数据的一致性和完整性</td><td>poreign key</td></tr></tbody></table><p><a name="LXv2n"></a></p><h1 id="外键约束" tabindex="-1"><a class="header-anchor" href="#外键约束"><span>外键约束</span></a></h1><p><a name="Qsjls"></a></p><h2 id="添加外键" tabindex="-1"><a class="header-anchor" href="#添加外键"><span>添加外键</span></a></h2><div class="language-sql line-numbers-mode" data-highlighter="prismjs" data-ext="sql" data-title="sql"><pre><code><span class="line"><span class="token keyword">create</span> <span class="token keyword">table</span> 表名<span class="token punctuation">(</span></span>
+<span class="line">  字段名 数据类型<span class="token punctuation">,</span></span>
+<span class="line">  <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span></span>
+<span class="line">  <span class="token punctuation">[</span><span class="token keyword">constraint</span><span class="token punctuation">]</span> <span class="token punctuation">[</span>外键名称<span class="token punctuation">]</span> <span class="token keyword">foreign</span> <span class="token keyword">key</span> <span class="token punctuation">(</span>外键字段名<span class="token punctuation">)</span> <span class="token keyword">references</span> 主表<span class="token punctuation">(</span>主表列名<span class="token punctuation">)</span></span>
+<span class="line"><span class="token punctuation">)</span><span class="token punctuation">;</span></span>
+<span class="line"></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>alter table 表名 add constraint 外键名称 foreign key (外键字段名) references 主表(主表列名);</code><a name="o1p9Q"></a></p><h2 id="删除更新行为" tabindex="-1"><a class="header-anchor" href="#删除更新行为"><span>删除更新行为</span></a></h2><table><thead><tr><th>行为</th><th>说明</th></tr></thead><tbody><tr><td>no action</td><td>在父表中删除/更新对应记录时，首先检查该记录是否有对应外键，如果有则不允许删除/更新</td></tr><tr><td>restrict</td><td>同上</td></tr><tr><td>cascade</td><td>如果有对应外键，把外键对应数据也删除/更新</td></tr><tr><td>set null</td><td>把外键对应数据的外键设置为null</td></tr><tr><td>set default</td><td>设置为default</td></tr></tbody></table><p><code>alter table 表名 add constraint 外键名称 foreign key (外键字段) references 主表名 (主表字段名) on update cascade on delete cascade</code></p></div><!--[--><!--]--></div><footer class="vp-page-meta"><!----><div class="vp-meta-item git-info"><!----><!----></div></footer><!----><!--[--><!--]--></main><!--]--></div><!--[--><!----><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-crvdi8lb.js" defer></script>
+  </body>
+</html>
